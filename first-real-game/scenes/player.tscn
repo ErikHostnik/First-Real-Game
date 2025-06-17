@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3p6npmc6gyy"]
+[gd_scene load_steps=12 format=3 uid="uid://d3p6npmc6gyy"]
 
 [ext_resource type="Texture2D" uid="uid://cd02p5q174m5s" path="res://assets/Main_Player_Anim/Idle.png" id="1_g2els"]
 [ext_resource type="Script" uid="uid://desaiuvcb32uk" path="res://scripts/player.gd" id="1_qhqgy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("1_g2els")
@@ -61,6 +63,9 @@ height = 42.0
 script = ExtResource("1_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.921362, 0.943192, 0.951152, 1)
+self_modulate = Color(0.0153364, 1.75467e-05, 0.0691777, 1)
+material = SubResource("ShaderMaterial_g2els")
 position = Vector2(3, -66)
 sprite_frames = SubResource("SpriteFrames_a38lo")
 animation = &"idle"

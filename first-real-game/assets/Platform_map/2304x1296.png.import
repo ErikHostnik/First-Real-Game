@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6sc1os8v70at"
-path="res://.godot/imported/Nature_environment_01.png-52f59739dbdb639b15e114099c95df3f.ctex"
+uid="uid://c44yrioq7f1w5"
+path="res://.godot/imported/2304x1296.png-d4e226465b0936bb0c8859f89e044025.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Platform_map/Nature_environment_01.png"
-dest_files=["res://.godot/imported/Nature_environment_01.png-52f59739dbdb639b15e114099c95df3f.ctex"]
+source_file="res://assets/Platform_map/2304x1296.png"
+dest_files=["res://.godot/imported/2304x1296.png-d4e226465b0936bb0c8859f89e044025.ctex"]
 
 [params]
 
