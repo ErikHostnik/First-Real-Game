@@ -1263,6 +1263,7 @@ texture = ExtResource("1_lnu2h")
 63:21/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_u5sy4"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_iywne")
 
 [node name="Game" type="Node2D"]
@@ -1277,7 +1278,7 @@ tile_map_data = PackedByteArray("AAD4//T/AAA7AAoAAAD4//X/AAAZAA4AAAD4//b/AAAZAA8
 tile_set = SubResource("TileSet_u5sy4")
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(-1978, -237)
+position = Vector2(-426, -506)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(2, -42)
