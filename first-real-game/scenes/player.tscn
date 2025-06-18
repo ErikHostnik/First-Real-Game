@@ -150,6 +150,9 @@ radius = 9.0
 height = 42.0
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 5
+collision_layer = 2
+safe_margin = 0.001
 script = ExtResource("1_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -163,6 +166,5 @@ autoplay = "walk"
 frame_progress = 0.00382704
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(3, -39)
+position = Vector2(-3, -36)
 shape = SubResource("CapsuleShape2D_4ni07")
