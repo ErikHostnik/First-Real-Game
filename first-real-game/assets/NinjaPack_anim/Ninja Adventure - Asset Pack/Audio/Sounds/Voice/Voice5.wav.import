@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://6876bl6ueyi6"
+path="res://.godot/imported/Voice5.wav-c31bb092c75f14f1dc41b97d0d2ace50.sample"
+
+[deps]
+
+source_file="res://assets/NinjaPack_anim/Ninja Adventure - Asset Pack/Audio/Sounds/Voice/Voice5.wav"
+dest_files=["res://.godot/imported/Voice5.wav-c31bb092c75f14f1dc41b97d0d2ace50.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
