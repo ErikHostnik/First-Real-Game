@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://wdoefrc768di" path="res://assets/Platform_map/Clouds 2.png" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://b6sc1os8v70at" path="res://assets/Platform_map/Nature_environment_01.png" id="1_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://boyydm7oyaml5" path="res://assets/Menu_Anim_Cursor/8 Cursors/3.png" id="1_p57ef"]
-[ext_resource type="Script" uid="uid://s6txemrusnll" path="res://game.gd" id="1_u5sy4"]
+[ext_resource type="Script" uid="uid://s6txemrusnll" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://d3p6npmc6gyy" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cu6ck6l37khcs" path="res://scenes/platform.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b7x1tycttvqyq" path="res://scenes/killzone.tscn" id="5_iywne"]

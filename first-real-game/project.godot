@@ -13,7 +13,6 @@ config_version=5
 config/name="First-Real-Game"
 run/main_scene="uid://dr6fsfftlarwh"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
 
 [input]
 
