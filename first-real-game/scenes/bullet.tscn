@@ -11,3 +11,9 @@ self_modulate = Color(1, 1, 0, 1)
 position = Vector2(-11, 3.8147e-06)
 scale = Vector2(11.25, 9.84375)
 texture = ExtResource("1_mkf8s")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-1, -8)
+scale = Vector2(10.35, 8.55)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
