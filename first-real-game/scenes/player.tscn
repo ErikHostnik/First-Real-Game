@@ -295,4 +295,5 @@ position = Vector2(2, -36)
 shape = SubResource("CapsuleShape2D_4ni07")
 
 [node name="Gun" parent="." instance=ExtResource("8_smehm")]
-position = Vector2(8, -33)
+modulate = Color(0.74558, 0.74558, 0.74558, 1)
+position = Vector2(-9, -27)

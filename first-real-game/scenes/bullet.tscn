@@ -1,37 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://drt5e5jf7jnws"]
+[gd_scene load_steps=3 format=3 uid="uid://drt5e5jf7jnws"]
 
-[ext_resource type="Texture2D" uid="uid://veimi52n57gs" path="res://assets/NinjaPack_anim/Ninja Adventure - Asset Pack/Items/Projectile/Kunai.png" id="1_mkf8s"]
+[ext_resource type="Texture2D" uid="uid://c3miwv2ivmhmp" path="res://assets/Weapons/01 - Individual sprites/Bullets & Ammo/Revolver - Colt 45/Bullet.png" id="1_mkf8s"]
+[ext_resource type="Script" uid="uid://d3c0g5kfx5f6i" path="res://scripts/bullet.gd" id="1_y25gk"]
 
-[sub_resource type="GDScript" id="GDScript_mkf8s"]
-script/source = "extends CharacterBody2D
-
-
-var direction : float
-var speed = 2000
-
-func _ready():
-	global_position = position
-	global_rotation = rotation
-	
-func _physics_process(delta):
-	velocity = Vector2(speed,0).rotated(direction)
-	move_and_slide()
-"
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_y25gk"]
-radius = 15.0
-
-[node name="Bullet" type="CharacterBody2D"]
-script = SubResource("GDScript_mkf8s")
+[node name="Bullet" type="Node2D"]
+script = ExtResource("1_y25gk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-top_level = true
-visibility_layer = 1023
-z_index = 1200
-position = Vector2(6.5, 5)
-scale = Vector2(1.8125, 1.625)
+self_modulate = Color(1, 1, 0, 1)
+position = Vector2(-11, 3.8147e-06)
+scale = Vector2(11.25, 9.84375)
 texture = ExtResource("1_mkf8s")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(7, 6)
-shape = SubResource("CircleShape2D_y25gk")
