@@ -1,18 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1f4r1twjxor7"]
+[gd_scene load_steps=4 format=3 uid="uid://drt5e5jf7jnws"]
 
 [ext_resource type="Texture2D" uid="uid://veimi52n57gs" path="res://assets/NinjaPack_anim/Ninja Adventure - Asset Pack/Items/Projectile/Kunai.png" id="1_mkf8s"]
-[ext_resource type="Script" uid="uid://p85770a6y1uu" path="res://scripts/bullet.gd" id="1_y25gk"]
+
+[sub_resource type="GDScript" id="GDScript_mkf8s"]
+script/source = "extends CharacterBody2D
+
+
+var direction : float
+var speed = 2000
+
+func _ready():
+	global_position = position
+	global_rotation = rotation
+	
+func _physics_process(delta):
+	velocity = Vector2(speed,0).rotated(direction)
+	move_and_slide()
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y25gk"]
-radius = 7.07107
+radius = 15.0
 
-[node name="Bullet" type="Area2D"]
-script = ExtResource("1_y25gk")
+[node name="Bullet" type="CharacterBody2D"]
+script = SubResource("GDScript_mkf8s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 top_level = true
-z_index = 105
+visibility_layer = 1023
+z_index = 1200
+position = Vector2(6.5, 5)
+scale = Vector2(1.8125, 1.625)
 texture = ExtResource("1_mkf8s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 6)
 shape = SubResource("CircleShape2D_y25gk")

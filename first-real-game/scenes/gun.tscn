@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmoov8m3isbfa"]
+
+[ext_resource type="Script" uid="uid://t7mm3hs3utpf" path="res://scripts/gun.gd" id="1_og67c"]
+[ext_resource type="Texture2D" uid="uid://cm5drpgdnl5xu" path="res://assets/Weapons/01 - Individual sprites/Guns/Revolver - Colt 45 [64x32].png" id="1_x77fm"]
+
+[node name="Gun" type="Node2D"]
+script = ExtResource("1_og67c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(17, -8)
+scale = Vector2(0.660156, 0.835938)
+texture = ExtResource("1_x77fm")

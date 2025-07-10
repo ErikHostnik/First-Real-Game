@@ -1,12 +1,12 @@
-[gd_scene load_steps=20 format=4 uid="uid://dr6fsfftlarwh"]
+[gd_scene load_steps=19 format=4 uid="uid://dr6fsfftlarwh"]
 
 [ext_resource type="Texture2D" uid="uid://wdoefrc768di" path="res://assets/Platform_map/Clouds 2.png" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://b6sc1os8v70at" path="res://assets/Platform_map/Nature_environment_01.png" id="1_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://boyydm7oyaml5" path="res://assets/Menu_Anim_Cursor/8 Cursors/3.png" id="1_p57ef"]
-[ext_resource type="Script" uid="uid://s6txemrusnll" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://d3p6npmc6gyy" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cu6ck6l37khcs" path="res://scenes/platform.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b7x1tycttvqyq" path="res://scenes/killzone.tscn" id="5_iywne"]
+
+[sub_resource type="GDScript" id="GDScript_iywne"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_yqjtg"]
 tile_data = PackedInt32Array(0, 3473408, 7, 65536, 3473408, 7, 131072, 3473408, 8, 196608, 3473408, 9, 262144, 3473408, 7, 1, 3538944, 7, 65537, 3538944, 7, 131073, 3538944, 8, 196609, 3538944, 9, 262145, 3538944, 7, 2, 3407872, 7, 65538, 3407872, 7, 131074, 3407872, 8, 196610, 3407872, 9, 262146, 3407872, 7, 3, 3473408, 7, 65539, 2949120, 10, 131075, 2949120, 11, 196611, 3473408, 9, 262147, 3473408, 7, 4, 3538944, 7, 65540, 3014656, 10, 131076, 3014656, 11, 196612, 3538944, 9, 262148, 3538944, 7, 5, 3407872, 7, 65541, 3080192, 10, 131077, 3080192, 11, 196613, 3407872, 9, 262149, 3407872, 7, 6, 3473408, 7, 65542, 3145728, 10, 131078, 3145728, 11, 196614, 3473408, 9, 262150, 3473408, 7, 7, 3538944, 7, 65543, 3211264, 10, 131079, 3211264, 11, 196615, 3538944, 9, 262151, 3538944, 7, 8, 3407872, 7, 65544, 3276800, 10, 131080, 3276800, 11, 196616, 3407872, 9, 262152, 3473408, 7, 9, 3473408, 7, 65545, 3342336, 10, 131081, 3342336, 11, 196617, 3473408, 9, 262153, 3538944, 7, 10, 3538944, 7, 65546, 3538944, 7, 131082, 3538944, 8, 196618, 3538944, 9, 262154, 3407872, 7, 11, 3407872, 7, 65547, 3407872, 7, 131083, 3407872, 8, 196619, 3407872, 9, 262155, 3473408, 7, 12, 3473408, 7, 65548, 3473408, 7, 131084, 3473408, 8, 196620, 3473408, 9, 262156, 3538944, 7)
@@ -1570,14 +1570,12 @@ _data = {
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p57ef"]
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_u5sy4")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = SubResource("GDScript_iywne")
 
 [node name="PlatformMap" type="Node" parent="."]
 
 [node name="BackgroundMap2" type="Sprite2D" parent="PlatformMap"]
-position = Vector2(-1490, -942.5)
+position = Vector2(-1511, -944)
 scale = Vector2(12.5417, 12.1327)
 texture = ExtResource("1_lbhrr")
 
@@ -1636,7 +1634,7 @@ position = Vector2(-1423, -1132)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(2, -42)
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.7, 0.7)
 limit_bottom = 375
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -1646,9 +1644,3 @@ position = Vector2(-1438, 349)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_p57ef")
-
-[node name="MouseCursor" type="Sprite2D" parent="."]
-z_index = 100
-position = Vector2(-1451.75, -1944.75)
-scale = Vector2(2.79167, 2.175)
-texture = ExtResource("1_p57ef")

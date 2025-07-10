@@ -10,9 +10,6 @@ const DASH_DURATION = 0.2
 
 # Animacija, spawn točka in bullet scena
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var bullet_spawn_point: Node2D = $BulletSpawn
-@onready var bullet_scene: PackedScene = preload("res://scenes/bullet.tscn") 
-
 # Stanja
 var is_rolling = false
 var roll_timer = 0.0
@@ -22,6 +19,7 @@ var can_dash = true
 var dash_vector = Vector2.ZERO
 
 func _physics_process(delta: float) -> void:
+	
 	# Gravitacija
 	if not is_on_floor():
 		if not is_dashing:
@@ -96,18 +94,3 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.flip_h = true
 
 	move_and_slide()
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		shoot()
-
-func shoot() -> void:
-	print("Streljam!")
-	var bullet = bullet_scene.instantiate() as Area2D
-	var mouse_pos = get_global_mouse_position()
-	var direction = (mouse_pos - bullet_spawn_point.global_position).normalized()
-
-	bullet.position = bullet_spawn_point.global_position
-	bullet.direction = direction
-
-	get_tree().current_scene.add_child(bullet)
